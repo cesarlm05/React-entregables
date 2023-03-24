@@ -1,0 +1,12 @@
+.cart--widget {
+  margin: 0 50px 0 50px;
+}
+
+.cart--img {
+  width: 30px;
+  cursor: progress;
+}
+
+.cart--count {
+  margin: 0 15px 0 15px;
+}

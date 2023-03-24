@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import "./CartWidget.css"
 
 const CartWidget = () => {
-  return (
-    <div>CartWidget</div>
-  )
-}
+  const cartImg = "https://cdn-icons-png.flaticon.com/512/263/263142.png";
 
-export default CartWidget
+  return (
+    <div className="cart--widget">
+      <img className="cart--img" src={cartImg} alt="" />
+      <span className="cart--count">3</span>
+    </div>
+  );
+};
+
+export default CartWidget;
