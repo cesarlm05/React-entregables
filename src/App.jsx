@@ -1,11 +1,11 @@
 import Header from "./components/Header/Header";
-import ListContainer from "./components/ListContainer/ListContainer";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
     <>
     <Header />
-    <ListContainer />
+    <ItemListContainer />
     </>
   );
 }
