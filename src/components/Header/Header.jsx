@@ -1,10 +1,8 @@
 import React from "react";
 import NavBar from "../NavBar/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../Home/Home";
-import Mountain from "../Mountain/Mountain";
-import Gravel from "../Gravel/Gravel";
-import Road from "../Road/Road";
+import ItemListContainer from "../ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 
 const Header = () => {
   return (
@@ -12,10 +10,9 @@ const Header = () => {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/mountain" element={<Mountain />} />
-          <Route path="/gravel" element={<Gravel />} />
-          <Route path="/road" element={<Road />} />
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="category/:idCat" element={<ItemListContainer />} />
+          <Route path="item/:id" element={<ItemDetailContainer />} />
         </Routes>
       </BrowserRouter>
     </header>
@@ -23,3 +20,12 @@ const Header = () => {
 };
 
 export default Header;
+
+
+//import Home from "../Home/Home";
+//import Mountain from "../Mountain/Mountain";
+//import Gravel from "../Gravel/Gravel";
+//import Road from "../Road/Road";
+//<Route path="/mountain" element={<Mountain />} />
+//<Route path="/gravel" element={<Gravel />} />
+//<Route path="/road" element={<Road />} />
