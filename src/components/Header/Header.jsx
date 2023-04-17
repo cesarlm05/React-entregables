@@ -21,11 +21,3 @@ const Header = () => {
 
 export default Header;
 
-
-//import Home from "../Home/Home";
-//import Mountain from "../Mountain/Mountain";
-//import Gravel from "../Gravel/Gravel";
-//import Road from "../Road/Road";
-//<Route path="/mountain" element={<Mountain />} />
-//<Route path="/gravel" element={<Gravel />} />
-//<Route path="/road" element={<Road />} />
