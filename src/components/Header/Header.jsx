@@ -13,6 +13,7 @@ const Header = () => {
           <Route path="/" element={<ItemListContainer />} />
           <Route path="category/:idCat" element={<ItemListContainer />} />
           <Route path="item/:id" element={<ItemDetailContainer />} />
+          <Route path="*" element={<h1>Sitio en construcción</h1>} />
         </Routes>
       </BrowserRouter>
     </header>
