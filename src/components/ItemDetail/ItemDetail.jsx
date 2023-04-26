@@ -1,4 +1,4 @@
-import React from "react";
+import "../ItemDetail/ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
@@ -16,20 +16,22 @@ const ItemDetail = ({ id, name, description, price, img, stock }) => {
   };
 
   return (
-    <div className="card" style={{ width: "18rem" }}>
-      <img src={img} className="card-img-top" alt={name} />
-      <div className="card-body">
-        <p className="card-text">
-          <h2>Nombre: {name}</h2>
-          <h3>Precio: {price}</h3>
-          <h3>Item: {id}</h3>
-          <p>{description}</p>
-        </p>
-        {addCount > 0 ? (
-          <Link to="/cart">Terminar compra</Link>
-        ) : (
-          <ItemCount inicial={1} stock={stock} onAdd={itemCount} />
-        )}
+    <div className="item--detail">
+      <div className="card" style={{ width: "25rem" }}>
+        <img src={img} className="card-img-top" alt={name} />
+        <div className="card-body">
+          <p className="card-text">
+            <h2>Nombre: {name}</h2>
+            <h3>Precio: {price}</h3>
+            <h3>Item: {id}</h3>
+            <p>{description}</p>
+          </p>
+          {addCount > 0 ? (
+            <Link to="/cart">Terminar compra</Link>
+          ) : (
+            <ItemCount inicial={1} stock={stock} onAdd={itemCount} />
+          )}
+        </div>
       </div>
     </div>
   );
