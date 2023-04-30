@@ -22,9 +22,10 @@ const ItemDetail = ({ id, name, description, price, img, stock }) => {
         <div className="card-body">
           <p className="card-text">
             <h2>Nombre: {name}</h2>
-            <h3>Precio: {price}</h3>
-            <h3>Item: {id}</h3>
+            <h6>Item: {id}</h6>
             <p>{description}</p>
+            <h3>Precio: {price}</h3>
+            <h3>Stock: {stock}</h3>
           </p>
           {addCount > 0 ? (
             <Link to="/cart">Terminar compra</Link>

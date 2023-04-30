@@ -9,7 +9,6 @@ const Item = ({ id, name, price, img }) => {
       </div>
       <ul className="list-group list-group-flush">
         <li className="list-group-item">Precio ${price}</li>
-        <li className="list-group-item">ID: {id}</li>
       </ul>
       <div className="card-body">
         <Link to={`/item/${id}`} className="card-link">
