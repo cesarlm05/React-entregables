@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { CarritoContext } from "../../context/CarritoContext";
+import { CartContext } from "../../context/CartContext";
 import CartItem from "../CartItem/CartItem";
 
 const Cart = () => {
-  const { carrito, cleanCarrito } = useContext(CarritoContext);
+  const { cart: carrito, cleanCarrito } = useContext(CartContext);
 
   const totalCarrito = carrito.reduce(
     (total, product) => total + product.cantidad,
@@ -40,15 +40,16 @@ const Cart = () => {
         >
           Limpiar carrito
         </button>
-        <p className="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
+        <p className="card-text">Mas acciones.</p>
         <Link to="/" className="card-link">
+          <button type="button" className="btn btn-secondary">
           Seguir comprando
+          </button>
         </Link>
         <Link to="/checkout" className="card-link">
-          Finalizar compra
+          <button type="button" className="btn btn-primary">
+            Finalizar compra
+          </button>
         </Link>
       </div>
     </div>
